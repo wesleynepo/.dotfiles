@@ -22,13 +22,13 @@ set nowritebackup
 set cmdheight=2
 set updatetime=300
 set shortmess+=c
+set termguicolors
 
 
 
 call plug#begin('~/.vim/plugged')
 Plug 'vim-airline/vim-airline'
 Plug 'nvim-telescope/telescope.nvim'
-Plug 'gruvbox-community/gruvbox'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -38,13 +38,14 @@ Plug 'kyazdani42/nvim-web-devicons'
 Plug 'romgrk/barbar.nvim'
 Plug 'junegunn/fzf.vim'
 Plug 'andweeb/presence.nvim'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'marko-cerovac/material.nvim'
 call plug#end()
 
-colorscheme gruvbox
-highlight Normal guibg=none ctermbg=none
-highlight NonText ctermbg=none guibg=none
-
 let mapleader = " "
+
+let g:material_style = "darker"
+colorscheme material
 
 fun! TrimWhitespace()
     let l:save = winsaveview()
