@@ -1,4 +1,4 @@
-!#/usr/bin/env bash
+#!/usr/bin/env bash
 
 session=$(find ~/Work/Projects ~/Projects -mindepth 1 -maxdepth 1 -type d | fzf )
 session_name=$(basename "$session" | tr . _)
