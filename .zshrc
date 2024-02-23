@@ -99,3 +99,8 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 source /usr/share/nvm/init-nvm.sh
+
+# QOL k8s stuff, alias
+alias k=kubectl
+# Source the commands to have autocompletion
+[[ $commands[kubectl] ]] && source <(kubectl completion zsh)
