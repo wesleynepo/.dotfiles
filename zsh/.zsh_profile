@@ -8,8 +8,9 @@ export TERMINAL=alacritty
 export DOTFILES=$HOME/.dotfiles
 
 # Bless of being portugues speaker
-setxkbmap -model abnt2 -layout us -variant intl
-
+if [[ $(uname) != "Darwin" ]]; then
+    setxkbmap -model abnt2 -layout us -variant intl
+fi
 
 VIM="nvim"
 
